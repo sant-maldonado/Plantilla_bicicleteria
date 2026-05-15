@@ -1,0 +1,128 @@
+.bikes {
+  background: white;
+}
+
+.bikes-filter {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  padding: 12px 24px;
+  background: transparent;
+  border: 2px solid var(--gray);
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.bikes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.bike-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.bike-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.bike-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.bike-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.bike-card:hover .bike-image img {
+  transform: scale(1.1);
+}
+
+.bike-category {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 14px;
+  background: var(--primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+
+.bike-info {
+  padding: 24px;
+}
+
+.bike-info h3 {
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+
+.bike-description {
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.bike-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bike-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 1024px) {
+  .bikes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .bikes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bikes-filter {
+    flex-wrap: wrap;
+  }
+}
